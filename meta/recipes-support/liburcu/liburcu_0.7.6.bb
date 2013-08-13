@@ -18,3 +18,19 @@ CFLAGS += "-O0"
 S = "${WORKDIR}/userspace-rcu-${PV}"
 CFLAGS_append_libc-uclibc = " -D_GNU_SOURCE"
 inherit autotools
+do_install_append(){
+install -d ${D}/usr/lib/liburcu-common.so.1
+install -d ${D}/usr/lib/liburcu-bp.so.1.0.0
+install -d ${D}/usr/lib/liburcu-mb.so.1.0.0
+install -d ${D}/usr/lib/liburcu.so.1
+install -d ${D}/usr/lib/liburcu-cds.so.1
+install -d ${D}/usr/lib/liburcu-qsbr.so.1.0.0
+install -d ${D}/usr/lib/liburcu-qsbr.so.1
+install -d ${D}/usr/lib/liburcu-cds.so.1.0.0
+install -d ${D}/usr/lib/liburcu.so.1.0.0
+install -d ${D}/usr/lib/liburcu-signal.so.1.0.0
+install -d ${D}/usr/lib/liburcu-signal.so.1
+install -d ${D}/usr/lib/liburcu-common.so.1.0.0
+install -d ${D}/usr/lib/liburcu-mb.so.1
+
+}

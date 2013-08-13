@@ -40,3 +40,13 @@ addtask remove_lscpu before do_configure after do_patch
 
 CACHED_CONFIGUREVARS += "scanf_cv_alloc_modifier=as"
 EXTRA_OECONF_virtclass-native += "--disable-fallocate --disable-use-tty-group"
+
+do_install_append(){
+install -d ${D}/usr/lib/libuuid.so.1
+install -d ${D}/usr/lib/libuuid.so.1.3.0
+install -d ${D}/usr/lib/libuuid.so.1
+
+
+
+}
+

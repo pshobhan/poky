@@ -26,3 +26,12 @@ S = "${WORKDIR}/git"
 do_configure_prepend () {
 	( cd ${S}; ${S}/bootstrap )
 }
+do_install_append(){
+
+install -d ${D}/usr/lib/liblttng-ust-fork.so.0.0.0
+install -d ${D}/usr/lib/liblttng-ust.so.0.0.0
+install -d ${D}/usr/lib/liblttng-ust-ctl.so.0.0.0
+install -d ${D}/usr/lib/liblttng-ust-ctl.so.0
+install -d ${D}/usr/lib/liblttng-ust.so.0
+install -d ${D}//usr/lib/liblttng-ust-libc-wrapper.so.0
+}
